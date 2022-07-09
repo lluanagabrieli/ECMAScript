@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARROW FUNCTIONS</title>
+</head>
+<body>
+    
+    <script>
+        
+
+        //funções com um parâmetro podem ser colocadas sem os parênteses
+        /*let parOuImpar = x => {
+            if(x % 2 === 0 ){
+                return 'par'
+            }else{
+                return 'ímpar'
+            }
+        }
+        document.write(parOuImpar(4))*/
+
+
+        //funções com lógicas básicas de return implícito:
+        /*
+        let conta = x => x*x
+        document.write(conta(10))
+        */
+
+        //se fosse da forma habitual:
+        /*let conta = function(x) {
+            return x*x
+        }
+        document.write(conta(2))*/
+
+        //uso normal de functions anônimas:
+        /*let parOuImpar = function(x){
+            if(x % 2 === 0 ){
+                return 'par'
+            }else{
+                return 'ímpar'
+            }
+        }
+        document.write(parOuImpar(53))*/
+
+        //uso de arrow functions:
+        /*let parOuImpar = (x) => {
+            if(x % 2 === 0 ){
+                return 'par'
+            }else{
+                return 'ímpar'
+            }
+        }
+        document.write(parOuImpar(4))*/
+
+        //deixando o código mais enxuto com o uso de operadores ternários:
+        let parOuImpar = (x) => x % 2 === 0 ? 'par' : 'ímpar'
+        document.write(parOuImpar(7))
+
+    </script>
+
+</body>
+</html>

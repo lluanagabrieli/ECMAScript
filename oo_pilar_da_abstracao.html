@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILAR DA ABSTRAÇÃO</title>
+</head>
+<body>
+    <script>
+        //1 - Entidade
+        //2 - Identidade
+        //3 - Caracteristicas ou atributos
+        //4 - Ações ou métodos
+
+        //modelo de objeto
+        class ContaBancaria {
+            
+            constructor(){
+                this.agencia = 1275
+                this.numeroConta = 5550123
+                this.saldo = 100
+                this.limite = 500
+            }
+            depositar(valorDeposito){
+                this.saldo += valorDeposito
+            }
+            sacar(valorSaque){
+                this.saldo -= valorSaque
+            }
+            consultarSaldo(){
+                return this.saldo
+            }
+        }
+        let x = new ContaBancaria()
+        console.log(x.consultarSaldo())
+
+        x.depositar(500)
+        console.log(x.consultarSaldo())
+
+        x.sacar(300)
+        console.log(x.consultarSaldo())
+
+
+        
+    </script>
+</body>
+</html>

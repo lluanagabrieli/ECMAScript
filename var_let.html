@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var e Let</title>
+</head>
+<body>
+    <script>
+
+    /*
+        //3 ESCOPOS: GLOBAL, FUNÇÃO E BLOCO
+
+        //var de escopo global. Pode ser utilizada em qualquer local.
+        var serie = 'Friends'
+
+        console.log(serie)
+
+        //escopo de função
+        function x(){
+            var serie = 'Game of Thrones'
+            console.log('escopo de função:' +serie)
+
+            //escopo de bloco dentro da função
+            if(true){
+                console.log('escopo de bloco dentro da função: '+serie)
+            }
+        }
+    
+        x()
+
+        //escopo de bloco
+        if(true){
+            console.log('escopo de bloco: '+serie)
+        }
+
+    */
+    //-------------------------------------------------------------------------------------------------
+    //utilização do Let: ele respeita o respectivo bloco em que está inserido, como se fosse uma var criada dentro de uma function.
+
+
+    //UTILIZANDO VAR: a var pode ser chamada fora do bloco. 
+    /*if(true){
+        var serie = 'friends'
+    }
+    console.log(serie)*/
+
+
+    //UTILIZANDO LET: ele funciona somente dentro do bloco, não podendo ser chamado fora dele.
+    /*if(true){
+        let serie = 'Game of Thrones'
+    }
+    console.log(serie)
+    */
+    //-------------------------------------------------------------------------------------------------
+
+    //aqui a var serie contida dentro do bloco vai sobrepor a de escopo global, mudando o seu respectivo valor para o mesmo. 
+    var serie = 'Annie with E'
+
+    {
+        var serie = 'Game of Thrones'
+        console.log('dentro do bloco: '+serie)
+    }
+
+    console.log('fora do bloco: '+serie)
+
+    </script>
+</body>
+</html>

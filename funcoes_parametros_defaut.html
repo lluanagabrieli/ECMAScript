@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARAMETROS DEFAUT</title>
+</head>
+
+<body>
+    <script>
+        //parametros defaut servem para substituir o 'undefined' que fica quando não é passado nenhum parâmetro. O nome é colocado ao lado do nome do parâmetro.
+        function historia(nomePrincesa = 'Isabel', coberturaCastelo = 'flores', nomeGata = 'Mingal'){
+            document.write(`Era uma vez uma princesa com o nome de ${nomePrincesa}. Ela morava num lindo castelo coberto de ${coberturaCastelo}. Tinha uma gatinha chamada ${nomeGata}.`)
+        }
+
+        //também pode ser colocado undefined caso não for passado nenhum parâmetro. 
+        historia('Luana', undefined, undefined)
+    </script>
+</body>
+</html>

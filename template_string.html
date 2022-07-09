@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPLATE STRING</title>
+</head>
+<body>
+
+    <script>
+    //utilização de outro formato de concatenação: `${}`
+
+        let nome = 'Luana'
+        //não permite quebra de linhas
+        //console.log('Olá '+nome+', tudo bem?')
+
+        //permite quebra de linhas
+        console.log(`Olá ${nome},
+tudo bem?`)
+
+        //permite a chamada de funções
+        function operacao(x,y){
+            return x *y
+        }
+
+        console.log(`A multiplicação de 2 x 5 é: ${operacao(2,5)}`)
+    </script>
+
+</body>
+</html>
