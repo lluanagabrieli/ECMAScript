@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILAR DA ABSTRAÇÃO - REFLEXÃO</title>
+</head>
+<body>
+    <script>
+        //array de cadeiras
+        let cadeiras = []
+
+        cadeiras[0] = []
+        cadeiras[0]['qtdPernas'] = 4
+        cadeiras[0]['giratoria'] = false
+        cadeiras[0]['cor'] = 'azul'
+
+        cadeiras[1] = []
+        cadeiras[1]['qtdPernas'] = 1
+        cadeiras[1]['giratoria'] = true
+        cadeiras[1]['cor'] = 'vermelho'
+
+        //Paradigma procedural
+        /*
+        let pernas = 4
+        let giratoria = false
+        let cor = 'azul'
+        */
+
+        function girarCadeira(indice, pernas){
+            if(pernas < cadeiras[indice]['qtdPernas']){
+                console.log('Erro: cadeira não pode ter menos do que 4 pernas!')
+            }else{
+                return console.log('Cadeira está com as 4 pernas completas!')
+            }
+        }
+        girarCadeira(0, 3)
+
+        
+    </script>
+</body>
+</html>
