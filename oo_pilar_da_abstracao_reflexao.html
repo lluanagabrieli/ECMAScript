@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
 <body>
     <script>
         //array de cadeiras
-        let cadeiras = []
+        /*let cadeiras = []
 
         cadeiras[0] = []
         cadeiras[0]['qtdPernas'] = 4
@@ -21,22 +22,71 @@
         cadeiras[1]['cor'] = 'vermelho'
 
         //Paradigma procedural
-        /*
+        
         let pernas = 4
         let giratoria = false
         let cor = 'azul'
-        */
+        
 
         function girarCadeira(indice, pernas){
             if(pernas < cadeiras[indice]['qtdPernas']){
                 console.log('Erro: cadeira não pode ter menos do que 4 pernas!')
             }else{
-                return console.log('Cadeira está com as 4 pernas completas!')
+                console.log('Cadeira está com as 4 pernas completas!')
             }
         }
-        girarCadeira(0, 3)
+        girarCadeira(0, 4)
 
-        
+        function novaCadeira(qtdPernas, giratoria, cor){
+            let cadeira = []
+            cadeira['qtdPernas'] = qtdPernas
+            cadeira['giratoria'] = giratoria
+            cadeira['cor'] = cor
+
+            cadeiras.push(cadeira)
+        }
+        novaCadeira(3, false, 'verde')
+        console.log(cadeiras)
+
+    
+        //paradigma da OO
+        class Cadeira{
+            constructor(qtdPernas, giratoria, cor){
+                this.qtdPernas = qtdPernas
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+            girarCadeira(){
+                if(this.giratoria === false){
+                    console.log('Cadeira não é giratória!')
+                }else{
+                    console.log('Girou!')
+                }
+            }
+        }
+        //instância da classe para virar objeto
+        let cadeira = new Cadeira(1, true, 'blue')
+        //chamando a função do objeto
+        cadeira.girarCadeira()
+    */
+
+    class Cadeira{
+            constructor(qtdPernas, giratoria, cor){
+                this.qtdPernas = qtdPernas
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+            girarCadeira = () => this.giratoria === false ? console.log('Cadeira não é giratória!') : console.log('Girou!')
+        }
+        //criação de arrays
+        let cadeira = []
+        cadeira[0] = new Cadeira(1, true, 'blue')
+        cadeira[1] = new Cadeira(4, false, 'pink')
+        cadeira[1].girarCadeira()
+
+        //adicionando mais um item no array
+        cadeira.push(new Cadeira(2, true, 'purple'))
+        console.log(cadeira)
     </script>
 </body>
 </html>
