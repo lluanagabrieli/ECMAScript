@@ -12,17 +12,28 @@
                 //deixando o atributo restrito ao objeto com o uso do "_" antes do nome
                 this.relacaoCanais = [2, 4, 6, 8, 10]
                 this._canalAtivo = 8
-                this.volume = 8
+                this.volume = 6
+            }
+            //get retorna informações
+            get CanalAtivo(){
+                console.log(this._canalAtivo)
+            }
+            //set define valores. 
+            set CanalAtivo(canal){
+                console.log(this._canalAtivo = canal)
             }
         }
+
         //instância
         let tv = new Tv()
-
-        //acessando o canalAtivo
+        //tentando acessar o atributo canalAtivo
         console.log(tv.canalAtivo)
 
-        //atribuindo outro valor ao canalAtivo
-        //console.log(tv.canalAtivo = 45)
+        //acessando o valor de this._canalAtivo através do método get.
+        tv.CanalAtivo
+
+        //atribuindo valor ao this_canalAtivo através do método set
+        tv.CanalAtivo = 2
     </script>
 </body>
 </html>
