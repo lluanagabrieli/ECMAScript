@@ -57,7 +57,18 @@
         }
         let passaro = new Passaro()
 
-        console.log(passaro, cachorro)
+        //criando o objeto Papagaio e herdando do objeto Passaro o atributo this.bico e os demais elementos contidos no elemento pai Animal
+        class Papagaio extends Passaro{
+            constructor(){
+                super()
+                this.sabeFalar = 'Sabe falar'
+            }
+            falar(){
+                console.log('Alow!')
+            }
+        }
+        let papagaio = new Papagaio()
+        papagaio.falar()
     </script>
 </body>
 </html>

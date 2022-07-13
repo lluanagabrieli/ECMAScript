@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPERADOR SUPER</title>
+</head>
+<body>
+    <script>
+        /*class Animal{
+            constructor(tamanho, bico, peso){
+                this.tamanho = tamanho
+                this.bico = bico
+                this.peso = peso
+            }
+        }
+
+        class Passaro extends Animal{
+            constructor(sabeFalar, tamanho, bico, peso){
+                super(tamanho,bico,peso)
+                this.sabeFalar = sabeFalar
+            }
+            voar(){
+                console.log('vôoooou!')
+            }
+        }
+
+        class Coruja extends Passaro{
+            constructor(sabeFalar, tamanho, bico, peso){
+                super(sabeFalar, tamanho, bico, peso)
+                this.cor = 'Marrom'
+            }
+        }
+
+        let coruja = new Coruja(true, 50, 'pequeno', 10)
+        console.log(coruja)
+
+        let coruja2 = new Coruja(false, 20, 'médio', 20)
+        console.log(coruja2)*/
+
+        class Pessoa{
+            constructor(primeiroNome, segundoNome, idade){
+                this.nome = {
+                    primeiroNome,
+                    segundoNome}
+                
+                this.idade = idade
+            }
+        }
+
+        class Professor extends Pessoa{
+            constructor(materia, turno, primeiroNome, segundoNome, idade){
+                super(primeiroNome, segundoNome, idade)
+                this.materia = materia
+                this.turno = turno
+            }
+        }
+        let professor = new Professor('Matematica', 'Noturno', 'Luana', 'Gabrieli', 25)
+        console.log(professor)
+
+        class Aluno extends Pessoa{
+            constructor(classe, repetente, primeiroNome, segundoNome, idade){
+                super(primeiroNome, segundoNome, idade)
+                this.classe = classe
+                this.repetente = repetente
+            }
+        }
+        let aluno = new Aluno('A', false, 'Rodrigo', 'Cândido', 28)
+        
+        class Representante extends Aluno{
+            constructor(direito, aulasDadas, classe, repetente, primeiroNome, segundoNome, idade){
+                super(classe, repetente, primeiroNome, segundoNome, idade)
+                this.direito = direito
+                this.aulasDadas = aulasDadas
+            }
+        }
+        let representante = new Representante('pedir silêncio', 5, 'OAB', true, 'Amanda', 'Santos', 20)
+        console.log(representante)
+
+
+    </script>
+</body>
+</html>
+
