@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILAR DA HERANÇA</title>
+</head>
+<body>
+    <script>
+        //=> os objetos cachorro e passaro têm em comum os atributos "cor" e "tamanho"
+        //=> o método dormir()
+
+        //criação de um elemento pai para os filhos receberem os atributos e métodos em comum
+        class Animal{
+            constructor(){
+                this.cor = ''
+                this.tamanho = ''
+            }
+            dormir(){
+                console.log('Boa noite! zZzzZ')
+            }
+        }
+
+        /*
+        objeto Cachorro
+        => atributo orelha
+        => método correr() e o latir()
+        */
+
+        class Cachorro extends Animal{
+            constructor(){
+                super()
+                this.orelha = "grandes e caídas"
+            }
+            correr(){
+                console.log('Correu!')
+            }
+            latir(){
+                console.log('AuAu!')
+            }
+        }
+        let cachorro = new Cachorro()
+
+        /*
+        objeto Passaro
+        => tem como atributo o bico
+        => tem como método o voar()
+        */
+        class Passaro extends Animal{
+            constructor(){
+                super()
+                this.bico = 'pequeno'
+            }
+            voar(){
+                console.log('Vôou!')
+            }
+        }
+        let passaro = new Passaro()
+
+        console.log(passaro, cachorro)
+    </script>
+</body>
+</html>
