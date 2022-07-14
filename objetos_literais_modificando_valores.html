@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODIFICANDO VALORES</title>
+</head>
+<body>
+    
+    <script>
+        let Pessoa = {
+            nome: 'Rodrigo',
+            idade: 28,
+            mostrarPessoa(){
+                console.log(`${this.nome} tem ${this.idade} anos.`)
+            }
+        }
+        Pessoa.mostrarPessoa()
+
+        Pessoa.nome = 'Luana'
+        Pessoa.idade = 23
+        Pessoa.mostrarPessoa()
+
+
+    </script>
+
+</body>
+</html>
