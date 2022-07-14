@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJ.LITERAIS - MELHORIAS</title>
+</head>
+<body>
+    
+    <script>
+
+        //ES5
+        let nome = 'Luana'
+        let idade = 23
+        let cidade = 'Itajubá'
+
+        let Pessoa = {
+            nome: nome,
+            idade: idade,
+            cidade: cidade,
+            Resumo: function(){
+                console.log(`${nome} tem ${idade} anos e mora em ${cidade}.`)
+            }
+        }
+        Pessoa.Resumo()
+
+        //ES6
+        let Pessoa_2 = {
+            nome,
+            idade,
+            cidade,
+            Resumo(){
+                console.log(`${nome} tem ${idade} anos e mora em ${cidade}.`)
+            }
+        }
+        Pessoa_2.Resumo()
+
+
+    </script>
+</body>
+</html>
