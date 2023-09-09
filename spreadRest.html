@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread/Rest</title>
+</head>
+<body>
+
+    <script>
+        //spread: tem a função de "espalhar" os dados contidos em determinada variável, array, objetos.
+        //string
+        let myName = "Luana Gabrieli"
+        console.log(...myName)
+
+        //arrays
+        let cursos = ["Análise e Desenvolvimento de Sistemas", "Educação Física"]
+        let hobbies = ["Desenhar","Jogar",]
+        let person = ["Luana Gabrieli", "23 anos", "Estudante", ...cursos, ...hobbies]
+        console.log(person)
+
+        //objetos
+        let joao = {nome: "João", idade:23}
+        let clone = {hobbie: "Jogar", ...joao}
+        console.log(clone)
+
+        let idade = "23"
+        let luaninha = ["Luana", ...idade]
+        console.log(luaninha)
+
+
+    </script>
+</body>
+</html>
